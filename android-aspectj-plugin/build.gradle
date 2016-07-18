@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+
+sourceCompatibility = 1.7
+
+group 'com.deezer.gradle.plugin'
+version '1.0'
+
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile gradleApi()
+
+    compile 'com.squareup:javapoet:1.7.0'
+    compile "com.android.tools.build:gradle:2.1.0"
+
+    compile "org.aspectj:aspectjtools:1.8.9"
+
+    testCompile 'junit:junit:4.12'
+}
